@@ -11,7 +11,7 @@ class AccountController extends BaseController
     // public function __construct()
     // {
     //     $this->data['role'] = session()->get('role');
-    // }
+    // }    
 
     public function Account_table(){
         $data['pageTitle']='Account_table'; 
@@ -84,7 +84,11 @@ class AccountController extends BaseController
     }
 
     public function Account_update($id_ad){
-
+        $manage= new ManageModel();
+        $data['pageTitle']='Account_edit'; 
+        $data['role']= session()->get('role');
+        return view('Admin/Dashboard/Account/update', $data);
+    
     }   
 
 

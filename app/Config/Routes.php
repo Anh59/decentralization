@@ -36,14 +36,27 @@ $routes->group("Admin",function($routes){
     //delete
     $routes->delete('Account_internal_delete/(:num)', 'Admin\AccountController::Account_delete/$1');
     //update
-
+    // $routes->update('Account_internal_update/(:num)', 'Admin\AccountController::Account_update/$1');
     $routes->get('Account_internal_edit/(:num)', 'Admin\AccountController::Account_edit/$1');
     // //database
    
 
-    
-    
+    //profile 
+    // app/Config/Routes.php
+
+    //ĐANG LỖI TRÙNG ROUTES
+    // $routes->get('Profilelike', 'Admin\ProfileController::index');
+
+
+
+
 });
+
+$routes->group('User',function($routes){
+
+
+});
+$routes->get('user_login','User\UserController::index');
 
 
 
